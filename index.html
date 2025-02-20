@@ -163,38 +163,369 @@
     </section>
     <!-- End paper abstract -->
 
-
+    <!-- Methodology and Benchmark -->
     <section class="hero is-small">
         <div class="hero-body">
-            <div class="container  is-max-desktop">
-                <div class="columns is-centered has-text-centered">
-                    <div class="column is-four-fifths">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
                         <h2 class="title is-3">How TheoremExplainAgent works?</h2>
-                        <div class="item">
-                            <!-- Your image here -->
-                            <p>
-                                TBD
-                            </p>
-                            <img src="static/images/framework.png" alt="MY ALT TEXT" />
+                        <p>We introduce <strong>TheoremExplainAgent (TEA)</strong>: a novel agentic system designed to generate explanatory videos of mathematical and scientific theorems. <strong>TEA</strong> employs a two-agent architecture: a planner agent that creates coherent story plans and narrations, and a coding agent that generates Python animation scripts with Manim. This allows the system to produce long, coherent, and pedagogically meaningful videos capable of effectively communicating complex concepts across various STEM disciplines, exposing deeper reasoning flaws that text-based evaluations often miss. To evaluate the efficacy of AI-generated explanations, and specifically those produced by <strong>TEA</strong>, we introduce <strong>TheoremExplainBench (TEB)</strong>: a benchmark suite comprising 240 meticulously selected theorems. <strong>TEB</strong> assesses explanations on five key dimensions: accuracy, depth, logical flow, visual relevance, and element layout, ensuring a comprehensive evaluation of pedagogical soundness. We believe <strong>TEA</strong>, coupled with the rigorous evaluation provided by <strong>TEB</strong>, will drive advancements in AI systems capable of generating truly insightful and educational explanations.</p>
+                        <br>
+                        <img src="static/images/framework.png" alt="MY ALT TEXT" />
+                        <h2 class="subtitle has-text-centered">
+                            Figure 2: An overview of the multimodal theorem explanation framework.
+                        </h2>
+                        <img src="static/images/method.png" alt="MY ALT TEXT" />
+                        <h2 class="subtitle has-text-centered">
+                            Figure 3: TheoremExplainAgent consists of two LLM agents. Taking a theorem as input, the planner agent create
+                            plans for execution. The coding agent then generates Python scripts to produce visuals and audio.
+                        </h2>
+                        <img src="static/images/dataset.png" alt="MY ALT TEXT" />
+                        <img src="static/images/magnifier.png" alt="MY ALT TEXT" />
+                        <h2 class="subtitle has-text-centered">
+                            Figure 4: Subfields of TheoremExplainBench under Computer Science, Chemistry, Mathematics, and Physics.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Methodology and Benchmark -->
+
+    <!-- Experimental Results -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h2 class="title is-3">Experimental Results</h2>
+                        <p>Based on our proposed benchmark evaluation metrics, we conducted evaluations on different large language models (LLMs) to assess their respective capabilities. The evaluations were performed using both pure inferencing and retrieval-augmented generation (RAG) methods. Below are the detailed results from our experiments:</p>
+                            <br>
+                            <br>
+                            <table class="table is-fullwidth">
+                                <thead>
+                                    <tr>
+                                        <th>Agent</th>
+                                        <th>Easy</th>
+                                        <th>Medium</th>
+                                        <th>Hard</th>
+                                        <th>Math</th>
+                                        <th>Phys</th>
+                                        <th>CS</th>
+                                        <th>Chem</th>
+                                        <th>Overall</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>GPT-4o</td>
+                                        <td>61.3%</td>
+                                        <td>57.5%</td>
+                                        <td>46.2%</td>
+                                        <td>61.7%</td>
+                                        <td>55.0%</td>
+                                        <td>58.3%</td>
+                                        <td>45.0%</td>
+                                        <td>55.0%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GPT-4o + RAG</td>
+                                        <td>42.5%</td>
+                                        <td>57.5%</td>
+                                        <td>37.5%</td>
+                                        <td>70.0%</td>
+                                        <td>40.0%</td>
+                                        <td>41.7%</td>
+                                        <td>31.7%</td>
+                                        <td>45.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Claude 3.5-Sonnet v1</td>
+                                        <td>2.5%</td>
+                                        <td>1.2%</td>
+                                        <td>2.5%</td>
+                                        <td>1.7%</td>
+                                        <td>1.7%</td>
+                                        <td>1.7%</td>
+                                        <td>3.3%</td>
+                                        <td>2.1%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Claude 3.5-Sonnet v1 + RAG</td>
+                                        <td>18.8%</td>
+                                        <td>13.8%</td>
+                                        <td>11.2%</td>
+                                        <td>23.3%</td>
+                                        <td>10.0%</td>
+                                        <td>20.0%</td>
+                                        <td>5.0%</td>
+                                        <td>14.6%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gemini 2.0-Flash</td>
+                                        <td>20.0%</td>
+                                        <td>11.2%</td>
+                                        <td>12.5%</td>
+                                        <td>16.7%</td>
+                                        <td>8.3%</td>
+                                        <td>21.7%</td>
+                                        <td>11.7%</td>
+                                        <td>14.6%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gemini 2.0-Flash + RAG</td>
+                                        <td>23.8%</td>
+                                        <td>21.2%</td>
+                                        <td>16.2%</td>
+                                        <td>26.7%</td>
+                                        <td>15.0%</td>
+                                        <td>20.0%</td>
+                                        <td>20.0%</td>
+                                        <td>20.4%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>o3-mini (medium)</td>
+                                        <td>93.8%</td>
+                                        <td>91.2%</td>
+                                        <td>96.2%</td>
+                                        <td>95.0%</td>
+                                        <td>93.3%</td>
+                                        <td>93.3%</td>
+                                        <td>93.3%</td>
+                                        <td>93.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>o3-mini (medium) + RAG</td>
+                                        <td>83.8%</td>
+                                        <td>82.5%</td>
+                                        <td>80.0%</td>
+                                        <td>81.7%</td>
+                                        <td>90.0%</td>
+                                        <td>88.3%</td>
+                                        <td>68.3%</td>
+                                        <td>82.1%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                             <h2 class="subtitle has-text-centered">
-                                Figure 2: TBD.
+                                Table 1: Agent Success Rate in Generating Complete Videos
                             </h2>
-                            <p>TBD.</p>
-                            <img src="static/images/method.png" alt="MY ALT TEXT" />
+                            <br>
+                            <br>
+                            <table class="table is-fullwidth">
+                                <thead>
+                                    <tr>
+                                        <th>Agent</th>
+                                        <th>Accuracy and Depth</th>
+                                        <th>Visual Relevance</th>
+                                        <th>Logical Flow</th>
+                                        <th>Element Layout</th>
+                                        <th>Visual Consistency</th>
+                                        <th>Overall Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>GPT-4o</td>
+                                        <td>0.79</td>
+                                        <td>0.79</td>
+                                        <td>0.89</td>
+                                        <td>0.59</td>
+                                        <td>0.87</td>
+                                        <td>0.78</td>
+                                    </tr>
+                                    <tr>
+                                        <td>GPT-4o + RAG</td>
+                                        <td>0.75</td>
+                                        <td>0.77</td>
+                                        <td>0.88</td>
+                                        <td>0.57</td>
+                                        <td>0.86</td>
+                                        <td>0.76</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Claude 3.5-Sonnet v1</td>
+                                        <td>0.75</td>
+                                        <td>0.87</td>
+                                        <td>0.88</td>
+                                        <td>0.57</td>
+                                        <td>0.92</td>
+                                        <td>0.79</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Claude 3.5-Sonnet v1 + RAG</td>
+                                        <td>0.67</td>
+                                        <td>0.79</td>
+                                        <td>0.69</td>
+                                        <td>0.65</td>
+                                        <td>0.87</td>
+                                        <td>0.71</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gemini 2.0 Flash</td>
+                                        <td>0.82</td>
+                                        <td>0.77</td>
+                                        <td>0.80</td>
+                                        <td>0.57</td>
+                                        <td>0.88</td>
+                                        <td>0.76</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gemini 2.0 Flash + RAG</td>
+                                        <td>0.79</td>
+                                        <td>0.75</td>
+                                        <td>0.84</td>
+                                        <td>0.58</td>
+                                        <td>0.87</td>
+                                        <td>0.76</td>
+                                    </tr>
+                                    <tr>
+                                        <td>o3-mini (medium)</td>
+                                        <td>0.76</td>
+                                        <td>0.76</td>
+                                        <td>0.89</td>
+                                        <td>0.61</td>
+                                        <td>0.88</td>
+                                        <td>0.77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>o3-mini (medium) + RAG</td>
+                                        <td>0.75</td>
+                                        <td>0.75</td>
+                                        <td>0.88</td>
+                                        <td>0.61</td>
+                                        <td>0.88</td>
+                                        <td>0.76</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Human-made Manim Videos</td>
+                                        <td>0.80</td>
+                                        <td>0.81</td>
+                                        <td>0.70</td>
+                                        <td>0.73</td>
+                                        <td>0.87</td>
+                                        <td>0.77</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                             <h2 class="subtitle has-text-centered">
-                                Figure 3: TBD
+                                Table 2: Performance of Proposed Metrics on Successfully Generated Videos
                             </h2>
-                            <p>
-                                TBD
-                            </p>
-                            <img src="static/images/dataset.png" alt="MY ALT TEXT" />
-                            <img src="static/images/magnifier.png" alt="MY ALT TEXT" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- End Experimental Results -->
+
+    <!-- Error Analysis -->
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h2 class="title is-3">Error Analysis</h2>
+                        <div class="content has-text-justified">
+                            <p>
+                                We analyzed the error logs from unsuccessful runs in the TheoremExplainAgent video generation process and identified three primary failure categories. The most common issue was Manim code hallucinations, which accounted for the majority of failures. These errors involved nonexistent functions, modules, object properties, or image assets, as well as incorrect function signatures with invalid parameter types and numbers, reflecting a misunderstanding of the Manim API. The second major issue stemmed from LaTeX rendering errors, primarily due to syntax mistakes and improper handling of special characters in mathematical expressions. Lastly, general coding errors were observed, including missing imports, undefined variables, and computational mistakes in NumPy-based operations. These findings reveal key challenges across LLMs, underscoring the need for better code reliability and API understanding in AI-generated videos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Error Analysis -->
+
+    <!-- Example Video -->
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <h2 class="title is-3 has-text-centered">Rendered Theorem Explanation Videos Example</h2>
+                <br>
+                <!-- High Quality Videos -->
+                <div class="columns is-centered">
+                    <div class="column is-full has-text-centered">
+                        <h3 class="title is-4">High Quality</h3>
+                        <div class="columns is-centered">
+                            <div class="column is-half">
+                                <h4 class="title is-5">Math: Intergration By Substitution</h4>
+                                <video controls>
+                                    <source src="static/videos/high_quality/integration_by_substitution_combined.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="column is-half">
+                                <h4 class="title is-5">Chemistry: Kjeldhal Method</h4>
+                                <video controls>
+                                    <source src="static/videos/high_quality/kjeldahl_method_combined.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="columns is-centered">
+                            <div class="column is-half">
+                                <h4 class="title is-5">Physics: Geometric Brownian Motion</h4>
+                                <video controls>
+                                    <source src="static/videos/high_quality/geometric_brownian_motion_combined.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="column is-half">
+                                <h4 class="title is-5">Computer Science: Gradient Descent</h4>
+                                <video controls>
+                                    <source src="static/videos/high_quality/gradient_descent_combined.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poor Quality Videos -->
+                <div class="columns is-centered">
+                    <div class="column is-full has-text-centered">
+                        <h3 class="title is-4">Poor Quality</h3>
+                        <div class="columns is-centered">
+                            <div class="column is-half">
+                                <h4 class="title is-5">Math: Pythagorean Theorem</h4>
+                                <video controls>
+                                    <source src="static/videos/poor_quality/the_pythagorean_theorem_combined.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="column is-half">
+                                <h4 class="title is-5">Chemistry: Michaelis Menten Kinetics</h4>
+                                <video controls>
+                                    <source src="static/videos/poor_quality/michaelis_menten_kinetics_combined.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="columns is-centered">
+                            <div class="column is-half">
+                                <h4 class="title is-5">Physics: Electromagnetic Spectrum</h4>
+                                <video controls>
+                                    <source src="static/videos/poor_quality/electromagnetic_spectrum_combined.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="column is-half">
+                                <h4 class="title is-5">Computer Science: K Menas Clustering</h4>
+                                <video controls>
+                                    <source src="static/videos/poor_quality/k_means_clustering_combined.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Example Video -->
 
     <!-- BibTex citation -->
     <section class="section" id="BibTeX">
