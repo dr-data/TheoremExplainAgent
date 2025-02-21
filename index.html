@@ -49,8 +49,6 @@
 </head>
 
 <body>
-
-
     <section class="hero">
         <div class="hero-body">
             <div class="container is-max-desktop">
@@ -143,7 +141,6 @@
     </section>
     <!-- End image carousel -->
 
-
     <!-- Paper abstract -->
     <section class="hero">
         <div class="hero-body">
@@ -182,10 +179,12 @@
                             plans for execution. The coding agent then generates Python scripts to produce visuals and audio.
                         </h2>
                         <img src="static/images/dataset.png" alt="MY ALT TEXT" />
-                        <img src="static/images/magnifier.png" alt="MY ALT TEXT" />
                         <h2 class="subtitle has-text-centered">
                             Figure 4: Subfields of TheoremExplainBench under Computer Science, Chemistry, Mathematics, and Physics.
                         </h2>
+                        <br>
+                        <h2 class="title is-4">Error Analysis</h2>
+                        <p>During the video generation process, we encountered several issues that led to unsuccessful renderings. These issues can be categorized into three primary failure types: Manim code hallucinations, LaTeX rendering errors, and general coding errors. Manim code hallucinations involved nonexistent functions, modules, or incorrect function signatures. LaTeX rendering errors were due to syntax mistakes and improper handling of special characters. General coding errors included missing imports, undefined variables, and computational mistakes. These findings highlight the need for better code reliability and API understanding in AI-generated videos.</p>
                     </div>
                 </div>
             </div>
@@ -420,24 +419,25 @@
     </section>
     <!-- End Experimental Results -->
 
-    <!-- Error Analysis -->
-    <section class="hero">
+    <!-- Case study -->
+    <section class="hero is-small">
         <div class="hero-body">
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h2 class="title is-3">Error Analysis</h2>
-                        <div class="content has-text-justified">
-                            <p>
-                                We analyzed the error logs from unsuccessful runs in the TheoremExplainAgent video generation process and identified three primary failure categories. The most common issue was Manim code hallucinations, which accounted for the majority of failures. These errors involved nonexistent functions, modules, object properties, or image assets, as well as incorrect function signatures with invalid parameter types and numbers, reflecting a misunderstanding of the Manim API. The second major issue stemmed from LaTeX rendering errors, primarily due to syntax mistakes and improper handling of special characters in mathematical expressions. Lastly, general coding errors were observed, including missing imports, undefined variables, and computational mistakes in NumPy-based operations. These findings reveal key challenges across LLMs, underscoring the need for better code reliability and API understanding in AI-generated videos.
-                            </p>
-                        </div>
+                        <h2 class="title is-3">Case Study</h2>
+                        <p>A key finding is that visual explanations significantly improve error diagnosis compared to text-based explanations. While text can reveal *that* an error exists (as seen in Figure 5), it often fails to elucidate *why* the error occurred. For instance, a text explanation might indicate incorrect application of the chain code theorem without pinpointing the underlying flaw in reasoning. In contrast, video-based explanations readily expose misunderstandings. Incorrect movement direction encodings and misplaced arrows directly reveal misinterpretations of the chain coding process. This demonstrates that visual explanations are not merely confirmations of errors; they are powerful diagnostic tools that uncover the root causes, leading to more effective analysis of AI-generated outputs.</p>
+                        <br>
+                        <img src="static/images/magnifier.png" alt="Illustration of Error Diagnosis" />
+                        <h2 class="subtitle has-text-centered">
+                            Figure 5: Visualizations expose reasoning errors more clearly than text, facilitating easier diagnosis.
+                        </h2>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Error Analysis -->
+    <!-- End Case Study -->
 
     <!-- Example Video -->
     <section class="hero">
