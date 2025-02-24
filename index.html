@@ -98,7 +98,7 @@
                       <span class="icon">
                         <i class="fab fa-github"></i>
                       </span>
-                                <span>Code</span>
+                                <span>Code (Soon)</span>
                                 </a>
                                 </span>
 
@@ -109,7 +109,7 @@
                                 <span class="icon">
                                     <i class="ai ai-arxiv"></i>
                                 </span>
-                                <span>arXiv</span>
+                                <span>arXiv (Soon)</span>
                                 </a>
                                 </span>
                                 
@@ -151,25 +151,6 @@
     </section>
     <!-- End Trailer Section -->
 
-    <!-- Image carousel -->
-    <section class="hero">
-        <div class="hero-body">
-            <div class="container is-max-desktop">
-                <div class="columns is-centered">
-                    <div class="column is-full">
-                        <div class="item">
-                            <!-- Your image here -->
-                            <img src="static/images/teaser.png" alt="TheoremExplainAgent" width="100%"/>
-                            <h2 class="subtitle">
-                                Figure 1: We do not have knowledge of a thing until we have grasped its cause (Aristotle, 1901). A strong reasoning model should not only generate correct conclusions but also communicate them effectively. Visualization enhances human intuition by making abstract concepts more concrete and revealing hidden relationships. Moreover, visual explanations expose reasoning errors more clearly than text, making it easier to diagnose model mistakes.
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End image carousel -->
 
     <!-- Paper abstract -->
     <section class="hero">
@@ -183,6 +164,10 @@
                                 Understanding domain-specific theorems often requires more than just text-based reasoning; effective communication through structured visual explanations is crucial for deeper comprehension. While large language models (LLMs) demonstrate strong performance in text-based theorem reasoning, their ability to generate coherent and pedagogically meaningful visual explanations remains an open challenge. In this work, we introduce TheoremExplainAgent, an agentic approach for generating long-form theorem explanation videos (over 5 minutes) using Manim animations. To systematically evaluate multimodal theorem explanations, we propose TheoremExplainBench, a benchmark covering 240 theorems across multiple STEM disciplines, along with 5 automated evaluation metrics. Our results reveal that agentic planning is essential for generating detailed long-form videos, and the o3-mini agent achieves a success rate of 93.8% and an overall score of 0.77. However, our quantitative and qualitative studies show that most of the videos produced exhibit minor issues with visual element layout. Furthermore, multimodal explanations expose deeper reasoning flaws that text-based explanations fail to reveal, highlighting the importance of multimodal explanations.
                             </p>
                         </div>
+                        <img src="static/images/teaser.png" alt="TheoremExplainAgent" width="75%"/>
+                            <h2 class="subtitle">
+                                Figure 1: We do not have knowledge of a thing until we have grasped its cause (Aristotle, 1901). A strong reasoning model should not only generate correct conclusions but also communicate them effectively. Visualization enhances human intuition by making abstract concepts more concrete and revealing hidden relationships. Moreover, visual explanations expose reasoning errors more clearly than text, making it easier to diagnose model mistakes.
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -199,13 +184,9 @@
                         <h2 class="title is-3">How TheoremExplainAgent works?</h2>
                         <p>We introduce <strong>TheoremExplainAgent (TEA)</strong>: a novel agentic system designed to generate explanatory videos of mathematical and scientific theorems. <strong>TEA</strong> employs a two-agent architecture: a planner agent that creates coherent story plans and narrations, and a coding agent that generates Python animation scripts with Manim. This allows the system to produce long, coherent, and pedagogically meaningful videos capable of effectively communicating complex concepts across various STEM disciplines, exposing deeper reasoning flaws that text-based evaluations often miss. To evaluate the efficacy of AI-generated explanations, and specifically those produced by <strong>TEA</strong>, we introduce <strong>TheoremExplainBench (TEB)</strong>: a benchmark suite comprising 240 meticulously selected theorems. <strong>TEB</strong> assesses explanations on five key dimensions: accuracy, depth, logical flow, visual relevance, and element layout, ensuring a comprehensive evaluation of pedagogical soundness. We believe <strong>TEA</strong>, coupled with the rigorous evaluation provided by <strong>TEB</strong>, will drive advancements in AI systems capable of generating truly insightful and educational explanations.</p>
                         <br>
-                        <img src="static/images/framework.png" alt="MY ALT TEXT" />
+                        <img src="static/images/method.png" alt="MY ALT TEXT" width="75%"/>
                         <h2 class="subtitle has-text-centered">
-                            Figure 2: An overview of the multimodal theorem explanation framework.
-                        </h2>
-                        <img src="static/images/method.png" alt="MY ALT TEXT" />
-                        <h2 class="subtitle has-text-centered">
-                            Figure 3: TheoremExplainAgent consists of two LLM agents. Taking a theorem as input, the planner agent create
+                            Figure 2: TheoremExplainAgent consists of two LLM agents. Taking a theorem as input, the planner agent create
                             plans for execution. The coding agent then generates Python scripts to produce visuals and audio.
                         </h2>
                         <br>
@@ -225,6 +206,10 @@
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
                         <h2 class="title is-3">Experimental Results</h2>
+                        <img src="static/images/framework.png" alt="MY ALT TEXT" width="75%"/>
+                        <h2 class="subtitle has-text-centered">
+                            Figure 3: An overview of the multimodal theorem explanation framework.
+                        </h2>
                         <p>Based on our proposed benchmark evaluation metrics, we conducted evaluations on different large language models (LLMs) to assess their respective capabilities. The evaluations were performed using both pure inferencing and retrieval-augmented generation (RAG) methods. Below are the detailed results from our experiments:</p>
                             <br>
                             <br>
@@ -454,7 +439,7 @@
                         <h2 class="title is-3">Case Study</h2>
                         <p>A key finding is that visual explanations significantly improve error diagnosis compared to text-based explanations. While text can reveal that an error exists (as seen in Figure 4), it often fails to elucidate why the error occurred. For instance, a text explanation might indicate incorrect application of the chain code theorem without pinpointing the underlying flaw in reasoning. In contrast, video-based explanations readily expose misunderstandings. Incorrect movement direction encodings and misplaced arrows directly reveal misinterpretations of the chain coding process. This demonstrates that visual explanations are not merely confirmations of errors; they are powerful diagnostic tools that uncover the root causes, leading to more effective analysis of AI-generated outputs.</p>
                         <br>
-                        <img src="static/images/magnifier.png" alt="Illustration of Error Diagnosis" />
+                        <img src="static/images/magnifier.png" alt="Illustration of Error Diagnosis" width="75%"/>
                         <h2 class="subtitle has-text-centered">
                             Figure 4: Visualizations expose reasoning errors more clearly than text, facilitating easier diagnosis.
                         </h2>
@@ -563,7 +548,7 @@
                         <p>TheoremExplainBench (TEB) is a curated dataset designed to evaluate the capability of AI systems to generate multimodal explanations of theorems. The dataset comprises 240 theorems sourced from Computer Science, Chemistry, Mathematics, and Physics, providing a diverse assessment of reasoning and visualization skills.</p>
                         <p>Each theorem includes its name and a contextual description, sourced from OpenStax and LibreTexts. Theorems are categorized into Easy, Medium, and Hard difficulty levels, with 80 entries per category.  TEB encompasses 68 distinct subfields, enabling focused analysis of AI performance across specific STEM domains.</p>
                         <br>
-                        <img src="static/images/dataset.png" alt="MY ALT TEXT" />
+                        <img src="static/images/dataset.png" alt="MY ALT TEXT" width=60%"/>
                         <h2 class="subtitle has-text-centered">
                             Figure 5: Subfields of TheoremExplainBench under Computer Science, Chemistry, Mathematics, and Physics.
                         </h2>
