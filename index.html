@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="static/css/index.css">
-
+    
     <script src="static/js/jquery.min.js"></script>
     <script src="static/js/main.js"></script>
     <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -296,14 +296,14 @@
                                     </tr>
                                     <tr>
                                         <td>o3-mini (medium)</td>
-                                        <td>93.8%</td>
-                                        <td>91.2%</td>
-                                        <td>96.2%</td>
-                                        <td>95.0%</td>
-                                        <td>93.3%</td>
-                                        <td>93.3%</td>
-                                        <td>93.3%</td>
-                                        <td>93.8%</td>
+                                        <td><strong>93.8%</strong></td>
+                                        <td><strong>91.2%</strong></td>
+                                        <td><strong>96.2%</strong></td>
+                                        <td><strong>95.0%</strong></td>
+                                        <td><strong>93.3%</strong></td>
+                                        <td><strong>93.3%</strong></td>
+                                        <td><strong>93.3%</strong></td>
+                                        <td><strong>93.8%</strong></td>
                                     </tr>
                                     <tr>
                                         <td>o3-mini (medium) + RAG</td>
@@ -340,7 +340,7 @@
                                         <td>GPT-4o</td>
                                         <td>0.79</td>
                                         <td>0.79</td>
-                                        <td>0.89</td>
+                                        <td><strong>0.89</strong></td>
                                         <td>0.59</td>
                                         <td>0.87</td>
                                         <td>0.78</td>
@@ -357,11 +357,11 @@
                                     <tr>
                                         <td>Claude 3.5-Sonnet v1</td>
                                         <td>0.75</td>
-                                        <td>0.87</td>
+                                        <td><strong>0.87</strong></td>
                                         <td>0.88</td>
                                         <td>0.57</td>
-                                        <td>0.92</td>
-                                        <td>0.79</td>
+                                        <td><strong>0.92</strong></td>
+                                        <td><strong>0.79</strong></td>
                                     </tr>
                                     <tr>
                                         <td>Claude 3.5-Sonnet v1 + RAG</td>
@@ -374,7 +374,7 @@
                                     </tr>
                                     <tr>
                                         <td>Gemini 2.0 Flash</td>
-                                        <td>0.82</td>
+                                        <td><strong>0.82</strong></td>
                                         <td>0.77</td>
                                         <td>0.80</td>
                                         <td>0.57</td>
@@ -394,7 +394,7 @@
                                         <td>o3-mini (medium)</td>
                                         <td>0.76</td>
                                         <td>0.76</td>
-                                        <td>0.89</td>
+                                        <td><strong>0.89</strong></td>
                                         <td>0.61</td>
                                         <td>0.88</td>
                                         <td>0.77</td>
@@ -413,7 +413,7 @@
                                         <td>0.80</td>
                                         <td>0.81</td>
                                         <td>0.70</td>
-                                        <td>0.73</td>
+                                        <td><strong>0.73</strong></td>
                                         <td>0.87</td>
                                         <td>0.77</td>
                                     </tr>
@@ -430,6 +430,74 @@
     </section>
     <!-- End Experimental Results -->
 
+    <!-- Example Video -->
+    <section class="hero is-light is-small">
+        <div class="hero-body">
+            <div class="container">
+                <h2 class="title is-3 has-text-centered">Rendered Theorem Explanation Videos Example (Sound On 🔊)</h2>
+                <br>
+                <!-- High Quality Carousel -->
+                <h2 class="subtitle is-4 has-text-centered">High Quality Videos</h3>
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item">
+                        <video poster="" id="integration" autoplay controls muted loop playsinline class="carousel-video">
+                            <source src="static/videos/high_quality/integration_by_substitution_combined.mp4" type="video/mp4">
+                        </video>
+                        <h2 class="subtitle has-text-centered">Math - Integration By Substitution</h2>
+                    </div>
+                    <div class="item">
+                        <video poster="" id="kjeldahl" autoplay controls muted loop playsinline class="carousel-video">
+                            <source src="static/videos/high_quality/kjeldahl_method_combined.mp4" type="video/mp4">
+                        </video>
+                        <h2 class="subtitle has-text-centered">Chemistry - Kjeldahl Method</h2>
+                    </div>
+                    <div class="item">
+                        <video poster="" id="brownian" autoplay controls muted loop playsinline class="carousel-video">
+                            <source src="static/videos/high_quality/geometric_brownian_motion_combined.mp4" type="video/mp4">
+                        </video>
+                        <h2 class="subtitle has-text-centered">Physics - Geometric Brownian Motion</h2>
+                    </div>
+                    <div class="item">
+                        <video poster="" id="gradient" autoplay controls muted loop playsinline class="carousel-video">
+                            <source src="static/videos/high_quality/gradient_descent_combined.mp4" type="video/mp4">
+                        </video>
+                        <h2 class="subtitle has-text-centered">Computer Science - Gradient Descent</h2>
+                    </div>
+                </div>
+                <br>
+                <!-- Poor Quality Carousel -->
+                <h3 class="subtitle is-4 has-text-centered">Poor Quality Videos</h3>
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item">
+                        <video poster="" id="pythagorean" autoplay controls muted loop playsinline class="carousel-video">
+                            <source src="static/videos/poor_quality/the_pythagorean_theorem_combined.mp4" type="video/mp4">
+                        </video>
+                        <h2 class="subtitle has-text-centered">Math - Pythagorean Theorem</h2>
+                    </div>
+                    <div class="item">
+                        <video poster="" id="menten" autoplay controls muted loop playsinline class="carousel-video">
+                            <source src="static/videos/poor_quality/michaelis_menten_kinetics_combined.mp4" type="video/mp4">
+                        </video>
+                        <h2 class="subtitle has-text-centered">Chemistry - Michaelis Menten Kinetics</h2>
+                    </div>
+                    <div class="item">
+                        <video poster="" id="spectrum" autoplay controls muted loop playsinline class="carousel-video">
+                            <source src="static/videos/poor_quality/electromagnetic_spectrum_combined.mp4" type="video/mp4">
+                        </video>
+                        <h2 class="subtitle has-text-centered">Physics - Electromagnetic Spectrum</h2>
+                    </div>
+                    <div class="item">
+                        <video poster="" id="kmeans" autoplay controls muted loop playsinline class="carousel-video">
+                            <source src="static/videos/poor_quality/k_means_clustering_combined.mp4" type="video/mp4">
+                        </video>
+                        <h2 class="subtitle has-text-centered">Computer Science - K Means Clustering</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Example Video -->
+     
     <!-- Case study -->
     <section class="hero is-small">
         <div class="hero-body">
@@ -449,94 +517,6 @@
         </div>
     </section>
     <!-- End Case Study -->
-
-    <!-- Example Video -->
-    <section class="hero">
-        <div class="hero-body">
-            <div class="container is-max-desktop">
-                <h2 class="title is-3 has-text-centered">Rendered Theorem Explanation Videos Example (Sound On 🔊)</h2>
-                <br>
-                <!-- High Quality Videos -->
-                <div class="columns is-centered">
-                    <div class="column is-full has-text-centered">
-                        <h3 class="title is-4">High Quality</h3>
-                        <div class="columns is-centered">
-                            <div class="column is-half">
-                                <h4 class="title is-5">Math: Intergration By Substitution</h4>
-                                <video autoplay muted controls>
-                                    <source src="static/videos/high_quality/integration_by_substitution_combined.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div class="column is-half">
-                                <h4 class="title is-5">Chemistry: Kjeldahl Method</h4>
-                                <video autoplay muted controls>
-                                    <source src="static/videos/high_quality/kjeldahl_method_combined.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                        <div class="columns is-centered">
-                            <div class="column is-half">
-                                <h4 class="title is-5">Physics: Geometric Brownian Motion</h4>
-                                <video autoplay muted controls>
-                                    <source src="static/videos/high_quality/geometric_brownian_motion_combined.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div class="column is-half">
-                                <h4 class="title is-5">Computer Science: Gradient Descent</h4>
-                                <video autoplay muted controls>
-                                    <source src="static/videos/high_quality/gradient_descent_combined.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Poor Quality Videos -->
-                <div class="columns is-centered">
-                    <div class="column is-full has-text-centered">
-                        <h3 class="title is-4">Poor Quality</h3>
-                        <div class="columns is-centered">
-                            <div class="column is-half">
-                                <h4 class="title is-5">Math: Pythagorean Theorem</h4>
-                                <video autoplay muted controls>
-                                    <source src="static/videos/poor_quality/the_pythagorean_theorem_combined.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div class="column is-half">
-                                <h4 class="title is-5">Chemistry: Michaelis Menten Kinetics</h4>
-                                <video autoplay muted controls>
-                                    <source src="static/videos/poor_quality/michaelis_menten_kinetics_combined.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                        <div class="columns is-centered">
-                            <div class="column is-half">
-                                <h4 class="title is-5">Physics: Electromagnetic Spectrum</h4>
-                                <video autoplay muted controls>
-                                    <source src="static/videos/poor_quality/electromagnetic_spectrum_combined.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                            <div class="column is-half">
-                                <h4 class="title is-5">Computer Science: K Means Clustering</h4>
-                                <video autoplay muted controls>
-                                    <source src="static/videos/poor_quality/k_means_clustering_combined.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Example Video -->
 
     <!-- Dataset Details -->
     <section class="hero is-small">
