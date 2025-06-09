@@ -2,7 +2,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2502.19400-b31b1b.svg)](https://arxiv.org/abs/2502.19400)
 <a href='https://huggingface.co/papers/2502.19400'><img src='https://img.shields.io/static/v1?label=Paper&message=Huggingface&color=orange'></a> 
 
-[**🌐 Homepage**](https://tiger-ai-lab.github.io/TheoremExplainAgent/)  | [**📖 arXiv**](https://arxiv.org/abs/2502.19400) | [**🤗 HuggingFace Dataset**](https://huggingface.co/datasets/TIGER-Lab/TheoremExplainBench) 
+[**🌐 Homepage**](https://tiger-ai-lab.github.io/TheoremExplainAgent/)  | [**📖 arXiv**](https://arxiv.org/abs/2502.19400) | [**🤗 HuggingFace Dataset**](https://huggingface.co/datasets/TIGER-Lab/TheoremExplainBench) | [Video Data](https://drive.google.com/file/d/18kmzXvbxaFGyJw-g51jnq9m93v_ez4aJ/view)
 
 [![contributors](https://img.shields.io/github/contributors/TIGER-AI-Lab/TheoremExplainAgent)](https://github.com/TIGER-AI-Lab/TheoremExplainAgent/graphs/contributors)
 [![license](https://img.shields.io/github/license/TIGER-AI-Lab/TheoremExplainAgent.svg)](https://github.com/TIGER-AI-Lab/TheoremExplainAgent/blob/main/LICENSE)
@@ -22,10 +22,18 @@ https://github.com/user-attachments/assets/17f2f4f2-8f2c-4abc-b377-ac92ebda69f3
 
 
 ## 📰 News
+* 2025 Jun 8: We released our generated video data for researchers to serve as baselines.
 * 2025 May 15: Paper accepted to ACL 2025 main conference.
 * 2025 Mar 3: Generation code and Evaluation code released. Thanks for the wait!
 <!--* 2025 Mar 3: Reach 404 stars without code.-->
 * 2025 Feb 27: Paper available on [Arxiv](https://arxiv.org/abs/2502.19400). Thanks AK for putting our paper on [HF Daily](https://huggingface.co/papers/2502.19400).
+
+## Downloading Generated Video Data
+Skip this section if you just want to try out the code.
+If you are researchers who just need the baseline videos as baseline comparison, download it here:
+```shell
+wget --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=18kmzXvbxaFGyJw-g51jnq9m93v_ez4aJ' -O /tmp/gdrive.html && wget --load-cookies /tmp/cookies.txt -O baseline_videos.zip "https://drive.usercontent.google.com/download?id=18kmzXvbxaFGyJw-g51jnq9m93v_ez4aJ&export=download&confirm=$(sed -rn 's/.*name="confirm" value="([^"]+)".*/\\1/p' /tmp/gdrive.html)&uuid=$(sed -rn 's/.*name="uuid" value="([^"]+)".*/\\1/p' /tmp/gdrive.html)" && rm /tmp/gdrive.html /tmp/cookies.txt
+```
 
 ## Installation
 
