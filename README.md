@@ -22,6 +22,7 @@ https://github.com/user-attachments/assets/17f2f4f2-8f2c-4abc-b377-ac92ebda69f3
 
 
 ## 📰 News
+* 2025 Jun 24: Paper got selected for Oral presentation. Out of more than 3,000 accepted papers, only 243 were selected for oral presentations.
 * 2025 Jun 8: We released our generated video data for researchers to serve as baselines.
 * 2025 May 15: Paper accepted to ACL 2025 main conference.
 * 2025 Mar 3: Generation code and Evaluation code released. Thanks for the wait!
