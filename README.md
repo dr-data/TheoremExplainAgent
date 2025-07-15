@@ -2,7 +2,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2502.19400-b31b1b.svg)](https://arxiv.org/abs/2502.19400)
 <a href='https://huggingface.co/papers/2502.19400'><img src='https://img.shields.io/static/v1?label=Paper&message=Huggingface&color=orange'></a> 
 
-[**🌐 Homepage**](https://tiger-ai-lab.github.io/TheoremExplainAgent/)  | [**📖 arXiv**](https://arxiv.org/abs/2502.19400) | [**🤗 HuggingFace Dataset**](https://huggingface.co/datasets/TIGER-Lab/TheoremExplainBench) | [🎥Video Data](https://drive.google.com/file/d/18kmzXvbxaFGyJw-g51jnq9m93v_ez4aJ/view)
+[**🌐 Homepage**](https://tiger-ai-lab.github.io/TheoremExplainAgent/)  | [**📖 arXiv**](https://arxiv.org/abs/2502.19400) | [**🤗 HuggingFace Dataset**](https://huggingface.co/datasets/TIGER-Lab/TheoremExplainBench) | [🎥Video Data](https://drive.google.com/file/d/18kmzXvbxaFGyJw-g51jnq9m93v_ez4aJ/view) | [**▶️ YouTube**](https://youtu.be/0G9YO637IVE)
 
 [![contributors](https://img.shields.io/github/contributors/TIGER-AI-Lab/TheoremExplainAgent)](https://github.com/TIGER-AI-Lab/TheoremExplainAgent/graphs/contributors)
 [![license](https://img.shields.io/github/license/TIGER-AI-Lab/TheoremExplainAgent.svg)](https://github.com/TIGER-AI-Lab/TheoremExplainAgent/blob/main/LICENSE)
@@ -11,7 +11,7 @@
 
 This repo contains the codebase for our paper [TheoremExplainAgent: Towards Video-based Multimodal Explanations for LLM Theorem Understanding](https://arxiv.org/abs/2502.19400)
 
-**ACL 2025 main**
+**ACL 2025 main** (Oral)
 
 ## Introduction
 TheoremExplainAgent is an AI system that generates long-form Manim videos to visually explain theorems, proving its deep understanding while uncovering reasoning flaws that text alone often hides.
