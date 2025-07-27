@@ -7,7 +7,8 @@
 [![contributors](https://img.shields.io/github/contributors/TIGER-AI-Lab/TheoremExplainAgent)](https://github.com/TIGER-AI-Lab/TheoremExplainAgent/graphs/contributors)
 [![license](https://img.shields.io/github/license/TIGER-AI-Lab/TheoremExplainAgent.svg)](https://github.com/TIGER-AI-Lab/TheoremExplainAgent/blob/main/LICENSE)
 [![GitHub](https://img.shields.io/github/stars/TIGER-AI-Lab/TheoremExplainAgent?style=social)](https://github.com/TIGER-AI-Lab/TheoremExplainAgent)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTIGER-AI-Lab%2FTheoremExplainAgent&count_bg=%23C83DB9&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false)](https://hits.seeyoufarm.com)
+![Hits](https://visitor-badge.laobi.icu/badge?page_id=TIGER-AI-Lab.TheoremExplainAgent)
+
 
 This repo contains the codebase for our paper [TheoremExplainAgent: Towards Video-based Multimodal Explanations for LLM Theorem Understanding](https://arxiv.org/abs/2502.19400)
 
