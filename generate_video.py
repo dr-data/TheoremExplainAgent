@@ -666,14 +666,12 @@ class VideoGenerator:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate Manim videos using AI')
-    parser.add_argument('--model', type=str,
-                        default='gemini/gemini-1.5-pro-002',
-                        help='Select the AI model to use (supports OpenRouter format, e.g. openrouter/anthropic/claude-3-haiku)')
+    parser.add_argument('--model', type=str, choices=allowed_models,
+                      default='gemini/gemini-1.5-pro-002', help='Select the AI model to use')
     parser.add_argument('--topic', type=str, default=None, help='Topic to generate videos for')
     parser.add_argument('--context', type=str, default=None, help='Context of the topic')
-    parser.add_argument('--helper_model', type=str,
-                        default=None,
-                        help='Select the helper model to use (supports OpenRouter format, e.g. openrouter/openai/gpt-4o-mini)')
+    parser.add_argument('--helper_model', type=str, choices=allowed_models,
+                      default=None, help='Select the helper model to use')
     parser.add_argument('--only_gen_vid', action='store_true', help='Only generate videos to existing plans')
     parser.add_argument('--only_combine', action='store_true', help='Only combine videos')
     parser.add_argument('--peek_existing_videos', '--peek', action='store_true', help='Peek at existing videos')
