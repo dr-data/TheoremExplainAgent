@@ -87,6 +87,10 @@ GOOGLE_APPLICATION_CREDENTIALS=""
 # Google Gemini
 GEMINI_API_KEY=""
 
+# OpenRouter
+OPENROUTER_API_KEY=""
+OPENROUTER_API_BASE_URL="https://openrouter.ai/api/v1"
+
 ...
 
 # Kokoro TTS Settings
@@ -112,6 +116,35 @@ export PYTHONPATH=$(pwd):$PYTHONPATH
 ### Supported Models
 <!--You can customize the allowed models by editing the `src/utils/allowed_models.json` file. This file specifies which `model` and `helper_model` the system is permitted to use.--> 
 The model naming follows the LiteLLM convention. For details on how models should be named, please refer to the [LiteLLM documentation](https://docs.litellm.ai/docs/providers).
+
+#### Using OpenRouter Models
+
+OpenRouter provides access to a wide variety of models from different providers through a single API. To use OpenRouter:
+
+1. **Get an API Key**: Sign up at [OpenRouter](https://openrouter.ai/) and get your API key
+2. **Configure Environment Variables** in your `.env` file:
+   ```shell
+   OPENROUTER_API_KEY="your_openrouter_key_here"
+   OPENROUTER_API_BASE_URL="https://openrouter.ai/api/v1"
+   ```
+3. **Use OpenRouter Model Format**: Use `openrouter/` prefix with the model identifier:
+   ```shell
+   --model "openrouter/anthropic/claude-3-haiku"
+   --model "openrouter/meta-llama/llama-3.1-8b-instruct"
+   --model "openrouter/openai/gpt-4o-mini"
+   ```
+
+**Example with OpenRouter**:
+```shell
+python generate_video.py \
+      --model "openrouter/anthropic/claude-3-haiku" \
+      --helper_model "openrouter/anthropic/claude-3-haiku" \
+      --output_dir "output/my_experiment" \
+      --topic "Pythagorean theorem" \
+      --context "fundamental relation in Euclidean geometry among the three sides of a right triangle"
+```
+
+For Google Colab usage, see the [Google Colab Setup](#google-colab-setup) section below.
 
 ### Generation (Single topic)
 ```shell
@@ -296,6 +329,61 @@ DatasetDict({
         num_rows: 240
     })
 })
+```
+
+## Google Colab Setup
+
+For easy setup and experimentation, we provide a comprehensive Google Colab notebook that handles all installation and configuration automatically.
+
+### 🚀 Quick Start with Colab
+
+1. **Open the Colab Notebook**: [TheoremExplainAgent_Colab.ipynb](TheoremExplainAgent_Colab.ipynb)
+2. **Click "Open in Colab"** button when viewing the notebook in GitHub
+3. **Follow the step-by-step instructions** in the notebook
+
+### ✨ What the Colab Notebook Includes
+
+- **Automated Installation**: All system dependencies via `apt-get`
+- **Python Dependencies**: Complete `pip install` setup (no conda required)
+- **Model Downloads**: Automatic Kokoro TTS model download
+- **Environment Configuration**: Easy API key setup for OpenRouter and other providers
+- **Ready-to-Run Examples**: Pre-configured generation examples
+- **Multiple Model Testing**: Compare different LLM providers
+- **Cost-Effective Options**: Optimized for OpenRouter's affordable models
+
+### 🔑 API Key Setup in Colab
+
+The notebook guides you through setting up API keys for various providers:
+
+```python
+# OpenRouter (recommended for cost-effectiveness)
+import os
+os.environ["OPENROUTER_API_KEY"] = "your_openrouter_key_here"
+os.environ["OPENROUTER_API_BASE_URL"] = "https://openrouter.ai/api/v1"
+
+# Or other providers
+os.environ["OPENAI_API_KEY"] = "your_openai_key_here"  # OpenAI
+os.environ["ANTHROPIC_API_KEY"] = "your_anthropic_key_here"  # Anthropic
+```
+
+### 💡 Colab-Specific Features
+
+- **No Local Installation Required**: Everything runs in the cloud
+- **GPU Support**: Optional GPU acceleration for faster processing
+- **Easy File Downloads**: Download generated videos directly to your computer
+- **Collaborative**: Share notebooks with team members
+- **Version Control**: Save different experiment configurations
+
+### 🎯 Example Usage in Colab
+
+```python
+# Generate a video with OpenRouter
+!python generate_video.py \
+    --model "openrouter/anthropic/claude-3-haiku" \
+    --helper_model "openrouter/anthropic/claude-3-haiku" \
+    --output_dir "output/my_experiment" \
+    --topic "Pythagorean theorem" \
+    --context "fundamental relation in Euclidean geometry among the three sides of a right triangle"
 ```
 
 ## ❓ FAQ
